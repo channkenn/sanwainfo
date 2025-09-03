@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("contactBtn");
-  btn.addEventListener("click", () => {
-    alert("お問い合わせフォームは現在準備中です！");
-  });
+  // フッター年を自動更新
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 });
