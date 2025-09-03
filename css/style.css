@@ -66,13 +66,65 @@ footer {
   font-size: 0.9rem;
   background: #eee;
 }
+.hero {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  padding: 60px 20px;
+}
 
-@media (min-width: 600px) {
-  .catch {
-    font-size: 2.5rem;
+.hero-inner {
+  display: flex; /* 横並び */
+  align-items: center; /* 垂直中央揃え */
+  gap: 20px; /* 画像とテキストの間 */
+  flex-wrap: wrap; /* スマホで縦並びに */
+  justify-content: center; /* 中央寄せ */
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.hero-text {
+  text-align: left;
+  max-width: 600px;
+}
+
+.catch {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.sub {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 600px) {
+  .hero-inner {
+    flex-direction: column; /* 縦並び */
+    text-align: center;
   }
-  .feature-list {
-    flex-direction: row;
-    justify-content: center;
+  .hero-text {
+    text-align: center;
+  }
+  .catch {
+    font-size: 1.8rem;
   }
 }
